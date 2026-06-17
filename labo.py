@@ -36,7 +36,7 @@ def _mid(p1,p2,o=0.10):
 
 def draw_step(current, idx, sym=None):
     plt.clf(); nodes=list(G.nodes())
-    nx.draw_networkx_nodes(G,pos,nodelist=nodes,node_size=[900 if n==current else 600 for n in nodes],linewidths=[3 if n in F else 1 for n in nodes],edgecolors="black")
+    nx.draw_network_nodes(G,pos,nodelist=nodes,node_size=[900 if n==current else 600 for n in nodes],linewidths=[3 if n in F else 1 for n in nodes],edgecolors="black")
     nx.draw_networkx_labels(G,pos)
     seen={}
     for u,v,k,d in G.edges(keys=True,data=True):
