@@ -1,1 +1,2 @@
-print("eres gay")
+print("Hola" \
+"")
