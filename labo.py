@@ -3,18 +3,20 @@ import sys, matplotlib.pyplot as plt, networkx as nx
 from matplotlib.patches import FancyArrowPatch
 
 # === Definición del DFA ===
-states = {"q0","q1","q2","q3","q4"}
+states = {"q0","q1","q2","q3","q4","q5"}
 alphabet = {"a","b"}
-delta = {("q0","a"):"q1", 
+delta = {("q0","a"):"q5", 
         ("q1","a"):"q4", 
-        ("q1","b"):"q4", 
+        ("q1","b"):"q3", 
         ("q2","a"):"q0", 
-        ("q2","b"):"q1", 
-        ("q3","b"):"q2", 
-        ("q4","a"):"q1", 
-        ("q4","b"):"q3"}
+        ("q2","b"):"q5", 
+        ("q3","a"):"q1",
+        ("q3","b"):"q2",  
+        ("q4","a"):"q2",
+        ("q4","b"):"q3", 
+        ("q5","a"):"q3"}
 
-q0, F = "q0", {"q4"}
+q0, F = "q0", {"q5"}
 
 # === Simulación ===
 def run(s):
@@ -39,18 +41,22 @@ import sys, matplotlib.pyplot as plt, networkx as nx
 from matplotlib.patches import FancyArrowPatch
 
 # === Definición del DFA ===
-states = {"q0","q1","q2","q3","q4"}
+states = {"q0","q1","q2","q3","q4","q5"}
 alphabet = {"a","b"}
-delta = {("q0","a"):"q1", 
+delta = {("q0","a"):"q5", 
         ("q1","a"):"q4", 
-        ("q1","b"):"q4", 
+        ("q1","b"):"q3", 
         ("q2","a"):"q0", 
-        ("q2","b"):"q1", 
-        ("q3","b"):"q2", 
-        ("q4","a"):"q1", 
-        ("q4","b"):"q3"}
+        ("q2","b"):"q5", 
+        ("q3","a"):"q1",
+        ("q3","b"):"q2",  
+        ("q4","a"):"q2",
+        ("q4","b"):"q3", 
+        ("q5","a"):"q3"}
 
-q0, F = "q0", {"q4"}
+q0, F = "q0", {"q5"}
+
+
 
 # === Simulación ===
 def run(s):
@@ -93,3 +99,5 @@ if __name__=='__main__':
         plt.ioff(); plt.show()
     except Exception as e:
         print("RECHAZA:", e)
+
+
